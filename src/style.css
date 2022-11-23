@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100%;
+  border: 0px solid black;
+  background: #f0ecfb;
+  transition: background 0.5s;
+}
+
+section.dark {
+  background: #def4f1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 350px;
+  padding: 10px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 40px #00000032, 0 0 15px #4a1d9246;
+  transition: 0.5s;
+}
+
+section.dark .container {
+  box-shadow: 0 0 40px #00000032, 0 0 15px #13838346;
+}
+
+.top {
+  position: relative;
+}
+
+.toggle {
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  background-color: #b394e67c;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+section.dark .toggle {
+  background-color: #96e0e07c;
+}
+
+.toggle::before {
+  content: "\f186";
+  font-family: fontAwesome;
+  color: #6d509b;
+  transition: 0.5s;
+}
+
+section.dark .toggle::before {
+  content: "\f185";
+  color: #5fa6a6;
+}
+
+.img1 {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  position: relative;
+  transition: filter 0.5s;
+}
+
+/* .img2 {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0%;
+  top: 142px;
+  left: 255px;
+  z-index: 10;
+  transition: opacity 0.2s;
+} */
+
+section.dark .img1 {
+  filter: hue-rotate(-0.25turn);
+}
+
+h3 {
+  font-weight: lighter;
+  color: #6d509b;
+  transition: 0.5s;
+}
+
+section.dark h3 {
+  color: #5fa6a6;
+}
+
+p {
+  margin-top: 10px;
+}
+
+.footer {
+  padding-top: 30px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+li i {
+  font-size: 22px;
+  color: #6d509b;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+section.dark li i {
+  color: #5fa6a6;
+  transition: 0.5s;
+}
+
+li i:hover {
+  color: #b494e6;
+}
+
+section.dark li i:hover {
+  color: #89dddd;
+}
